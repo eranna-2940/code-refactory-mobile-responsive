@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visitor Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .menu button {
+            background-color: red;
+            border: none;
+            color: black;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .menu button:hover {
+            color: black;
+        }
+
+        .container-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .half {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+
+        .left-half {
+            /* background-color: white; */
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 4px;
+
+            padding: 40px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .container h2 {
+            margin-bottom: 20px;
+
+        }
+
+        .container p {
+            margin-bottom: 30px;
+
+        }
+
+        .btn-primary {
+            background-color: red;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 30px;
+            cursor: pointer;
+            font-size: 14px;
+            color: black;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #242f3e;
+        }
+
+        .logo {
+            width: 38%;
+            height: auto;
+            /* z-index: 1000; */
+            /* position: relative; */
+            left: 0;/* Adjust the value to control the right spacing */
+        }
+
+        .btn.btn-primary {
+            padding: 4px 12px;
+            /* Adjust padding values for height and width */
+            font-size: 12px;
+            /* Adjust font size as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand" href="">
+            <img src="images/Infomerica_PNG Logo.png" alt="Infomerica Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="d-flex flex-row justify-content-end ml-auto">
+                <div class="navbar-nav">
+                    <a class="nav-link active text-danger" href="https://infomericainc.com/">Home <span
+                            class="sr-only">(current)</span></a>
+                    <a class="nav-link text-danger" href="https://infomericainc.com/Services/IT-Services">Services</a>
+                    <a class="nav-link text-danger"
+                        href="https://infomericainc.com/Solutions/NET-JAVA-PHP-Development">Solutions</a>
+                    <a class="nav-link text-danger" href="https://infomericainc.com/Contact-Us">Contact-Us</a>
+                    <a class="nav-link text-danger" href="https://infomericainc.com/Careers">Careers</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="half left-half pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h2>Visitor</h2>
+                    <p>Click below if you are a visitor. Explore our premises and enjoy a guided tour. Generate a
+                        visitor pass for seamless access.</p>
+                    <button class="btn btn-primary" onclick="window.location.href='/isvisitor'">Visitor</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2>Employee</h2>
+                    <p>Click below if you are an employee. Access employee resources and information. Generate a pass
+                        for yourself or a visitor you're sponsoring.</p>
+                    <button class="btn btn-primary" onclick="window.location.href='/isemployee'">Employee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
